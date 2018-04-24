@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Names</title>
+</head>
+<body>
+<form action="/add1">
+    <input type="text" name="name">
+    <input type="submit">
+</form>
+<br>
+<br>
+<br>
+<table>
+    <thead>
+    <tr>Names List</tr>
+    </thead>
+    <tbody>
+    <tr th:each="name, iterationStatus : ${names}">
+        <td th:text="${iterationStatus.count}"></td>
+        <td th:text="${name}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
